@@ -30,6 +30,23 @@ class HomeController extends Controller
         return view("home.index", compact('message'));
     }
 
+    public function post_Create(Request $request){
+        if(($request->account=="")||($request->password=="")){
+            
+            return view("home.login", compact('request'));
+        }else{
+            $meb = members::find($request->account);
+            if($meb->password==$request->password){
+                $message = message::all();
+                return view("home.admin_index", compact('message'));
+            }else{
+                return view("home.login", compact('request'));
+            }
+        }
+        
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *

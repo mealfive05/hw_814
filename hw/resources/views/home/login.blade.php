@@ -17,7 +17,7 @@
 
 <div class="container">
   <h2>管理員登入 </h2>
-  <form class="form-horizontal" method="post" action="/hw">
+  <form class="form-horizontal" method="post" action="">
     @csrf
         <fieldset>
         
@@ -25,7 +25,8 @@
         <legend> </legend>
         <br>
         <br>
-        
+        <div>帳號:jonas</div><br>
+        <div>密碼:jonas</div><br>
         <!-- Text input-->
         <div class="form-group">
             

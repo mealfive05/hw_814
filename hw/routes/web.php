@@ -15,6 +15,7 @@ Route::get('/', "HomeController@index");
 // Route::get('/login', "HomeController@login");
 // Route::get('/hw/{id}', "HomeController@show");
 // Route::post('/hw', "HomeController@admin_index");
+Route::post('/hw/create', "HomeController@post_Create");
 Route::get('hw/admin', 'HomeController@store');
 Route::get('hw/insert', 'HomeController@insert');
 Route::post('hw/insertTo', 'HomeController@insertTo');
